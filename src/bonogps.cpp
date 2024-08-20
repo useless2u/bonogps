@@ -9,6 +9,8 @@
 // For PlatformIO we need to include the Arduino framework
 #include <Arduino.h>
 // load PINout definitions from this header file
+
+
 #include "bonogps_board_settings.h"
 
 /*
@@ -66,7 +68,10 @@
 #define BLE_MTU 185
 
 // GPS port on UART2
-#define gpsPort Serial2
+#if !(defined(gpsPort))
+  #define gpsPort Serial2
+#endif
+
 // How much time before autobauding times out
 #define GPS_UART_TIMEOUT 10000UL
 #define GPS_STANDARD_BAUD_RATE 115200

@@ -35,6 +35,14 @@
 #define GPIO_BATTERY GPIO_NUM_35 // Read Battery status from PIN 25
 #define SHOWBATTERY // Show the battery charge indicator on the top menu of the web configuration panel
 
+
+#elif defined(ARDUINO_LOLIN_C3_MINI)
+
+#define RX2 20 // Standard label Rx2 on board
+#define TX2 21 // Standard label Tx2 on board
+#define WIFI_MODE_BUTTON 0 // default is: use the boot button to switch wifi modes
+
+
 #elif defined(ARDUINO_ESP32_DEV)
 
 #define RX2 16 // Standard label Rx2 on board
